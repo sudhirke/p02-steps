@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# 3 Step Questionnaire
+
+This project was created using native React-JS. This creates a 3 step UI asking different question and allows user to navigate.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+![User interface for survey question react app](image.png)
 
 ## Available Scripts
 
