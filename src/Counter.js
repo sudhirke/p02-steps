@@ -8,7 +8,10 @@ export default function Counter() {
   const date = new Date("May 24 2024");
   date.setDate(date.getDate() + count);
 
-  //    setStep(step >= messages.length ? 1 : (s) => s + 1);
+  function handleReset() {
+    setStep(0);
+    setCount(0);
+  }
 
   return (
     <>
@@ -44,6 +47,11 @@ export default function Counter() {
             : `${count} days ago was`}{" "}
           {date.toDateString()}
         </p>
+        {count >= 0 || step >= 1 ? (
+          <div>
+            <button onClick={handleReset}>Reset</button>
+          </div>
+        ) : null}
       </div>
     </>
   );
