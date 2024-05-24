@@ -14,13 +14,26 @@ export default function Counter() {
     <>
       <div className="steps">
         <div>
-          <button onClick={() => setStep((s) => s - 1)}>-</button> Step:{step}{" "}
+          <button onClick={() => setStep((s) => s - 1)}>-</button>
+          <input
+            type="range"
+            min={0}
+            max={10}
+            value={step}
+            onChange={(e) => setStep(e.target.valueAsNumber)}
+          ></input>
+          <span>{step}</span>
           <button onClick={() => setStep(step + 1)}>+</button>
         </div>
 
         <div>
-          <button onClick={() => setCount((c) => c - step)}>-</button> Count:
-          {count} <button onClick={() => setCount(count + step)}>+</button>
+          <button onClick={() => setCount((c) => c - step)}>-</button>
+          <input
+            type="text"
+            value={count}
+            onChange={(e) => setCount(e.target.valueAsNumber)}
+          />{" "}
+          <button onClick={() => setCount(count + step)}>+</button>
         </div>
 
         <p>
